@@ -21,7 +21,6 @@ module Api
 		  end
 
 		  def update
-		  	binding.break
 		    @product = Product.find(params[:id])
 
 		    if @product.update(product_params)
@@ -41,7 +40,7 @@ module Api
 		  private
 
 		  def product_params
-		    params.require(:product).permit(:name, :description, :price, :image, :brochure)
+		    params.require(:product).permit(:name, :description, :image, :brochure)
 		  end
 		end
 	end
